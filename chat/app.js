@@ -12,3 +12,10 @@ mongoose
   .catch((err) => console.log("현재 에러", err));
  
 module.exports = app;
+
+
+// .env
+
+// PORT=5001
+// DB=mongodb://localhost:27017/chat
+
