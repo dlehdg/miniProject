@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+// import useGetTopRatedMovies from '../hooks/useGetTopRatedMovies';
 
 function App() {
+
+  // const {data, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage} = useGetTopRatedMovies();
+
+  const data = {pages : [1,2,3]}
+  // const {ref, inView} = useInView()
+  
+  // useEffect(() => {
+    // console.log(inView);
+    // if(inView == true && hasNextPage && !isFetchingNextPage)
+    // fetchNextPage()
+    
+  // }, [inView])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data?.pages.map((page, index) => 
+        page.results.map((movie) => (
+          
+          <image src = {`https://image.tmdb.org/t/p/w500${movie.poster_path}`}></image>
+        ))
+      )}
+      {/* <h1 ref={ref}>테스트</h1> */}
     </div>
   );
 }
