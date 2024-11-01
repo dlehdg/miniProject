@@ -25,6 +25,7 @@ function App() {
           <image src = {`https://image.tmdb.org/t/p/w500${movie.poster_path}`}></image>
         ))
       )}
+      <h1>테스트</h1>
       {/* <h1 ref={ref}>테스트</h1> */}
     </div>
   );
