@@ -1,19 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
-// import useGetTopRatedMovies from '../hooks/useGetTopRatedMovies';
+import useGetTopRatedMovies from '../hooks/useGetTopRatedMovies';
 
 function App() {
 
-  // const {data, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage} = useGetTopRatedMovies();
+  const {data, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage} = useGetTopRatedMovies();
   const [test, setTest] = useState(null);
-  const data = {pages : [1,2,3]}
+  // const data = {pages : [1,2,3]}
   // const {ref, inView} = useInView()
   
   // useEffect(() => {
-    // console.log(inView);
-    // if(inView == true && hasNextPage && !isFetchingNextPage)
-    // fetchNextPage()
+  //   console.log(inView);
+  //   if(inView == true && hasNextPage && !isFetchingNextPage)
+  //   fetchNextPage()
     
   // }, [inView])
 
