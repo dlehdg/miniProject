@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import useGetTopRatedMovies from '../hooks/useGetTopRatedMovies';
+import { useInView } from 'react-intersection-observer';
+
 
 function App() {
 
   const {data, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage} = useGetTopRatedMovies();
   const [test, setTest] = useState(null);
   // const data = {pages : [1,2,3]}
-  // const {ref, inView} = useInView()
+  const {ref, inView} = useInView()
   
   // useEffect(() => {
   //   console.log(inView);
@@ -26,7 +28,7 @@ function App() {
         ))
       )}
       
-      {/* <h1 ref={ref}>테스트</h1> */}
+      <h1 ref={ref}>테스트</h1>
     </div>
   );
 }
